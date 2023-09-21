@@ -1,0 +1,36 @@
+{
+  "name": "node-red-contrib-mtconnect-mqtt-data-logger",
+  "version": "0.0.1",
+  "description": "A Node-RED node designed for taking data from MTConnect MQTT Agents and creating payload that is given as input to INfluxDB node",
+  "main": "MTConnectMQTTAgent_DataLogger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "node-red": {
+    "nodes": {
+      "MTConnectMQTTAgent_DataLogger": "MTConnectMQTTAgent_DataLogger.js"
+    }
+  },
+  "author": "Harshad Joshi (github.com/hj91)",
+  "license": "GPL-3.0",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hj91/node-red-contrib-mtconnect-mqtt-data-logger.git"
+  },
+  "keywords": [
+    "node-red",
+    "MTConnect",
+    "MQTT",
+    "Agent",
+    "Data",
+    "Logger",
+    "CNC",
+    "Industrial Machine"
+  ],
+  "bugs": {
+    "url": "https://github.com/hj91/node-red-contrib-mtconnect-mqtt-data-logger/issues"
+  },
+  "homepage": "https://github.com/hj91/node-red-contrib-mtconnect-mqtt-data-logger#readme"
+}
+
