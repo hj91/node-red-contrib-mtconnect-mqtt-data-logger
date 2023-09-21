@@ -1,0 +1,135 @@
+[
+    {
+        "id": "4b1dc6bc44457a9d",
+        "type": "tab",
+        "label": "MTConnect MQTT Agent Data Logger",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f2a896b31aa46f56",
+        "type": "mqtt in",
+        "z": "4b1dc6bc44457a9d",
+        "name": "",
+        "topic": "MTConnectFanuc/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "ff68418a9f0ef191",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "528c642484b72f49"
+            ]
+        ]
+    },
+    {
+        "id": "528c642484b72f49",
+        "type": "MTConnectMQTTAgent_DataLogger",
+        "z": "4b1dc6bc44457a9d",
+        "name": "Fanuc CNC Machine",
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "131092abcf2970c0",
+                "348521fbf0574fe9"
+            ]
+        ],
+        "icon": "font-awesome/fa-cogs"
+    },
+    {
+        "id": "131092abcf2970c0",
+        "type": "debug",
+        "z": "4b1dc6bc44457a9d",
+        "name": "debug 273",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 710,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "348521fbf0574fe9",
+        "type": "influxdb out",
+        "z": "4b1dc6bc44457a9d",
+        "influxdb": "c17fe6b837b7e50c",
+        "name": "",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 770,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ff68418a9f0ef191",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1884",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c17fe6b837b7e50c",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "mtconnect",
+        "name": "",
+        "usetls": false,
+        "tls": "dffcbfae.6e9d",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "dffcbfae.6e9d",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false
+    }
+]
